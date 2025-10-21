@@ -387,7 +387,7 @@ fn get_next_liquidity(
         if liquidity_net < 0 {
             current_liquidity + liquidity_net_unsigned
         } else {
-            if current_liquidity - liquidity_net_unsigned {
+            if current_liquidity >= liquidity_net_unsigned {
                 current_liquidity - liquidity_net_unsigned
             } else {
                 0
